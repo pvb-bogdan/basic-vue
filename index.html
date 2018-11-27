@@ -10,7 +10,16 @@
     <body>
         <div id="app">
             <input type="text" v-on:input="changeTitle">
-            <p>{{ title }}</p>
+            <p v-once>{{ title }}</p>
+            <p>{{ sayHello() }}</p>
+            <p>{{ useThis() }}</p>
+            <!-- <p>Link to google - <a href="{{ link }}">Click here</a></p> it will not work - no curly braces on attributes, bind it -->
+            <p>Link to google - <a v-bind:href="link" target="_blank">Click here</a></p><!--  v-on/v-bind - directive -->
+            <!-- vue does not render or inject html - it renders string by default -->
+            <!-- <p>{{ finishedLink }}</p> will render - <a href="www.petrebogdan.com">My site</a> -->
+            <p v-html="finishedLink"></p><!-- it will render the a link-->
+            <button v-on:click="increase">Click to increase value  {{ counter }}</button>
+            <p> {{ counter }}</p>
         </div>
         <script src="app.js"></script>
     </body>
