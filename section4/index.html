@@ -9,11 +9,27 @@
 <body>
   <!-- reacted to changes with computed methods -->
   <div id="app">
-      <button @click="increase">Click Me</button>
-      <p>Counter is: {{ counter }}</p>
-      <p>Result is: {{ result }}</p>
+      <!-- method app.js
+        <button @click="increase">Click Me</button>
+        <p>Counter is: {{ counter }}</p>
+        <p>Result is: {{ result }}</p>
+      -->
+      <!-- another method js
+        <button @click="increase">Click Me</button>
+        <button @click="decrease">Click Me</button>
+        <p>Counter is: {{ counter }}</p>
+        <p>Result is: {{ result }}</p>
+      -->
+      <button @click="counter++">Click Me +</button>
+      <button @click="counter--">Click Me -</button>
+      <button @click="secondCounter++"> second Click Me</button>
+      <p>Counter is: {{ counter }} | {{ secondCounter}}</p>
+      <p>Result is: {{ result() }} | {{ output }}</p>
+      <a :href="link">Some link</a>
   </div>
   <script src="vue.js"></script>
-  <script src="app.js"></script>
+  <!-- <script src="method-app.js"></script> -->
+  <!-- <script src="another-method-app.js"></script> -->
+  <script src="computed-app.js"></script>
 </body>
 </html>
