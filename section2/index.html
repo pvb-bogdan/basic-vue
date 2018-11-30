@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>section 2</title>
+</head>
+<body>
+  <div id="app">
+     <!-- <button @click="increase">Increase</button> // increase without arguments-->
+     <!-- <button @click="increase(2, $event)">Increase</button> increase with my arguments -->
+     <button @click="counter ++">Increase {{ counter }}</button>
+     <p>{{counter}}</p>
+     <p>{{counter * 2 > 15 ? 'Greater than 15 ' : 'Smaller than 15'}}</p>
+     <p @mousemove="updateCoords">
+       COORDINATES {{ x }} / {{ y }}
+      <!-- <span @mousemove="stopUpdateCoords">DEAD SPOT</span> stop by methods -->
+      <span @mousemove.stop="">DEAD SPOT</span> <!-- stop by event modifier .stop and  .prevent-->
+     </p>
+     <!-- key modifier .enter or .space etc-->
+     <input type="text" @keyup.enter="alertMe">
+  </div>
+  <script src="vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

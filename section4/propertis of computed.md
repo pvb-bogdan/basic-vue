@@ -1,0 +1,1 @@
+the computed function does not reload the page, but instead cache data and return it.
