@@ -8,7 +8,7 @@ new Vue ({
   computed: {
     output : function () {
       console.log('computed');
-      return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5';
+      return this.secondCounter > 5 ? 'Greater than 5' : 'Smaller than 5';
     }
   },
   watch: {
