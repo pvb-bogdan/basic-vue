@@ -1,14 +1,14 @@
 new Vue({
-        el: '#exercise',
-        data: {
-            value: ''
-        },
-        methods: {
-            alert: function () {
-                alert('alert');
-            },
-            getValue: function (e) {
-                return this.value;
-            }
-        }
-    });
+  el:"#exercise",
+  data:{
+    value: ''
+  },
+  methods: {
+    alertMe: function (){
+      alert('Show alert');
+    },
+    getValue: function(e) {
+      this.value = e.target.value;
+    }
+  }
+})
