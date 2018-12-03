@@ -3,7 +3,7 @@ new Vue({
     data: {
         title: 'Hello World',
         link: 'http://www.google.com',
-        finishedLink: '<a href="www.petrebogdan.com" target="_blank">My site</a>',
+        finishedLink: '<a href="http://www.petrebogdan.com" target="_blank">My site</a>',
         counter: 0
     },
     methods: {
