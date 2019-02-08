@@ -1,15 +1,13 @@
 <template>
-    <div class="col-xs-12 col-sm-6">
-        <p>Server Details are currently not updated yet</p>
-    </div> 
+  <div class="col-xs-12 col-sm-6">
+    <p>Server Details are currently not updated yet</p>
+    <p>Status: {{ }}</p>
+  </div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
 <style>
-
 </style>

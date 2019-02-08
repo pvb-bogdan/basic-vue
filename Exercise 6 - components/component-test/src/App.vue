@@ -19,13 +19,13 @@ import Servers from "./Servers/Servers.vue";
 
 export default {
   components: {
-    //ew could use ddifferent watsto name our comp
+    //we could use different ways to name our comp
     // cammelCasse
     appHeader: Header,
     // normal case
     "app-server-details": ServerDetails,
     "app-server-info": ServerInfo,
-    // ES6 case - 
+    // ES6 case -
     Servers
   }
 };
