@@ -1,12 +1,19 @@
 <template>
-  <div>
-    <li class="list-group-item">Server #{{ id }} - Status : {{ status}}</li>
-  </div>
+    <li 
+      class="list-group-item"
+      @click="serverSelected"  
+     >Server #{{ server.id }}</li>
 </template>
 
 <script>
+import { serverBus } from '../main.js'
 export default {
-  props: ["id", "status"]
+  props: ["server", "status"],
+  methods: {
+    serverSelected () {
+      serverBus.$emit ('serverSelected', this.server);
+    }
+  }
 };
 </script>
 
