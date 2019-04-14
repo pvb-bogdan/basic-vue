@@ -7,10 +7,17 @@
     <hr>
     <div class="row">
       <div class="col-sm-12 col-md-6">
-        <app-user-detail :name="name" @nameWasReset="name = $event" :resetFn="resetFn" :userAge="userAge"></app-user-detail>
+        <app-user-detail :name="name"
+                          @nameWasReset="name = $event"
+                          :resetFn="resetFn"
+                          :userAge="userAge">
+                          </app-user-detail>
       </div>
       <div class="col-sm-12 col-md-6">
-        <app-user-edit :userAge="userAge" @ageWasEdited="userAge = $event "></app-user-edit>
+        <app-user-edit
+                      :userAge="userAge"
+                      @ageWasEdited="userAge = $event ">
+                      </app-user-edit>
       </div>
     </div>
   </div>
@@ -35,6 +42,7 @@ export default {
     changeName() {
       this.name = "Monica";
     },
+    //callback fn - acts as an emit event (we could use one or the other)
     resetFn() {
       this.name = "Bogdan";
     }

@@ -4,6 +4,7 @@
     <p>Edit me</p>
     <p>User age: {{ userAge }}</p>
     <button class="btn btn-success" @click="changeAge">Change Age</button>
+    <button class="btn btn-success" @click="resetAge">Reset Age</button>
   </div>
 </template>
 
@@ -19,6 +20,9 @@ export default {
       // this.$emit('ageWasEdited', this.userAge)
       // eventBus.$emit('ageWasEdited', this.userAge);
       eventBus.changeAge(this.userAge);
+    },
+    resetAge () {
+      return this.userAge = 40;
     }
   }
 }
