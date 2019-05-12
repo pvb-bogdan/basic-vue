@@ -35,6 +35,7 @@ export default {
       this.name = "Bogdan";
       // $emit()
       this.$emit("nameWasReset", this.name);
+      // nameWasReset -the name of the event ,  this.name the arg of the event
     }
   },
   created () {
