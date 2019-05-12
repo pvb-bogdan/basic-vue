@@ -1,13 +1,13 @@
 <template>
     <div>
         <div id="on"
-            @click="value = schimba(true)"
-            :class="{active: value}">
+            @click="newValue = schimba(true)"
+            :class="{active: !newValue}">
             On
         </div>
         <div id="off"
-            @click="value = schimba(false)"
-            :class="{active: !value}">
+            @click="newValue = schimba(false)"
+            :class="{active: newValue}">
             Off
         </div>
     </div>
@@ -15,12 +15,12 @@
 
 <script>
 export default {
-    // data () {
-    //     return {
-    //         isOn: true
-    //     };
-    // },
     props: ['value'],
+    data () {
+         return {
+            newValue: this.value
+        }
+    },
     methods: {
         schimba (isOn){
             this.$emit('input', isOn);

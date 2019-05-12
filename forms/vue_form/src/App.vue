@@ -146,7 +146,7 @@ export default {
       gender: 'Male',
       selectedPriority: 'High',
       priorities: ['High', 'Medium', 'Low'],
-      dataSwitch: true,
+      dataSwitch: false,
       isSubmitted: false
     }
   },
